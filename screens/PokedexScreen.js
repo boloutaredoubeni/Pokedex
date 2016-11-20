@@ -15,8 +15,18 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 import { fetchPokemon } from '../actions/actions.pokedex';
+import cacheAssetsAsync from '../utilities/cacheAssetsAsync';
+import PokemonListItem from '../components/PokemonListItem';
+
 
 export class PokedexScreen extends Component {
+
+    static route = {
+        navigationBar: {
+            title: 'Pokemon',
+            backgroundColor: '#a70c00'
+        },
+    }
 
     static propTypes = {
         dispatch: PropTypes.func.isRequired,
@@ -38,46 +48,41 @@ export class PokedexScreen extends Component {
     }
 
     componentDidMount() {
-        let { dispatch } = this.props;
-        dispatch(fetchPokemon());
+      let { dispatch } = this.props;
+      dispatch(fetchPokemon());
     }
 
-    _renderRow(aPokemon) {
-        let num = (() => {
-            let { url } = aPokemon;
-            let parts = url.split('/');
-            return parts[parts.length - 2];
-        })();
-        return (
-            <View >
-                <Text>#{num}</Text>
-                {this._renderPokemonIcon(num)}
-                <Text>{aPokemon.name}</Text>
-            </View>
-        );
-    }
-
-    _renderPokemonIcon(num) {
-        let assetUrl = `pokemon-sprites/sprites/pokemon/other-sprites/official-artwork/${num}.png`
-        return (
-            <Image
-                style={{width: 50, height: 50}} 
-                source={require(assetUrl)}/>
-        )
+    _renderRow(pokemon) {
+      return (
+        <PokemonListItem key={`${pokemon.name}`} pokemon={pokemon} />
+      );
     }
 
     render() {
-        return (
-            <View>
-                <ListView
-                    enableEmptySections
-                    dataSource={this.state.dataSource}
-                    renderRow={aPokemon => this._renderRow(aPokemon)}
-                />
-            </View>
-        )
+      return (
+        <View>
+          <ListView
+            enableEmptySections
+            dataSource={this.state.dataSource}
+            renderRow={pokemon => this._renderRow(pokemon)}
+          />
+        </View>
+      )
     }
 }
+
+/** TODO: share with all screens */
+const styles = StyleSheet.create({
+    header: {
+        backgroundColor: '#a70c00'
+    },
+    container: {
+        flex: 1,
+    },
+    list: {
+        flex: 1,
+    },
+});
 
 export default connect(
     state => ({

@@ -1,0 +1,86 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "github:PokeAPI/sprites",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "github:PokeAPI/sprites",
+        "spec": "github:pokeapi/sprites",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:pokeapi/sprites.git",
+          "sshUrl": "git+ssh://git@github.com/pokeapi/sprites.git",
+          "httpsUrl": "git+https://github.com/pokeapi/sprites.git",
+          "gitUrl": "git://github.com/pokeapi/sprites.git",
+          "shortcut": "github:pokeapi/sprites",
+          "directUrl": "https://raw.githubusercontent.com/pokeapi/sprites/master/package.json"
+        }
+      },
+      "/home/tare/github.com/boloutaredoubeni/pokedex"
+    ]
+  ],
+  "_from": "pokeapi/sprites",
+  "_id": "pokemon-sprites@1.0.0",
+  "_inCache": true,
+  "_location": "/pokemon-sprites",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "github:PokeAPI/sprites",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "github:PokeAPI/sprites",
+    "spec": "github:pokeapi/sprites",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:pokeapi/sprites.git",
+      "sshUrl": "git+ssh://git@github.com/pokeapi/sprites.git",
+      "httpsUrl": "git+https://github.com/pokeapi/sprites.git",
+      "gitUrl": "git://github.com/pokeapi/sprites.git",
+      "shortcut": "github:pokeapi/sprites",
+      "directUrl": "https://raw.githubusercontent.com/pokeapi/sprites/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git://github.com/pokeapi/sprites.git#4d1491dcf082a33c89d49ddf59eb6ab2dca891b7",
+  "_shasum": "63e95a22eec6350ad90e7cf913e51133f8304fb5",
+  "_shrinkwrap": null,
+  "_spec": "github:PokeAPI/sprites",
+  "_where": "/home/tare/github.com/boloutaredoubeni/pokedex",
+  "author": {
+    "name": "PokeAPI"
+  },
+  "bugs": {
+    "url": "https://github.com/PokeAPI/sprites/issues"
+  },
+  "dependencies": {},
+  "description": "pokemon sprites",
+  "devDependencies": {},
+  "gitHead": "4d1491dcf082a33c89d49ddf59eb6ab2dca891b7",
+  "homepage": "https://github.com/PokeAPI/sprites#readme",
+  "keywords": [
+    "pokemon",
+    "pokeapi"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "pokemon-sprites",
+  "optionalDependencies": {},
+  "readme": "## PokéAPI Sprites\n\nTo save load on PokéAPI, we host all the sprite images here.\nIf you want to use all the sprites in your application, you can just download the entire contents directly.\n\n### Install\n\n#### Git\n```\ngit clone https://github.com/PokeAPI/sprites.git\n```\n\n#### Npm\n```\nnpm install --save github:PokeAPI/sprites\n```\n\n#### Bower\n```\nbower install --save PokeAPI/sprites\n```\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PokeAPI/sprites.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}

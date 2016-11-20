@@ -33,6 +33,7 @@ export default class RootNavigation extends React.Component {
     return (
       <TabNavigation
         tabBarHeight={56}
+        tabBarColor='#a70c00'
         initialTab="home">
 
         <TabNavigationItem
@@ -66,7 +67,7 @@ export default class RootNavigation extends React.Component {
     return (
       <Image
         style={styles.icon}
-        source={require(`pokemon-sprites/sprites/items/poke-ball.png`)}
+        source={{ uri: `http://192.168.1.129:8000/assets/images/pokemon-sprites/sprites/items/dream-world/${name}.png` }}
       />
     );
   }
@@ -111,5 +112,8 @@ const styles = StyleSheet.create({
   icon: {
     width: 30,
     height: 30
+  },
+  tabBar: {
+    backgroundColor: '#A70C00'
   }
 });
